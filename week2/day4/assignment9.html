@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dairy Items</title>
+</head>
+<body>
+
+<h3>Method 1: HTML Border Attribute</h3>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Dairy Item</th>
+        <th>Price (₹)</th>
+    </tr>
+    <tr><td>Milk</td><td>50</td></tr>
+    <tr><td>Curd</td><td>60</td></tr>
+    <tr><td>Butter</td><td>120</td></tr>
+</table>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dairy Items</title>
+
+    <style>
+        table {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 2px solid black;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+<body>
+
+<h3>Method 2: CSS Border</h3>
+
+<table>
+    <tr>
+        <th>Dairy Item</th>
+        <th>Price (₹)</th>
+    </tr>
+    <tr><td>Milk</td><td>50</td></tr>
+    <tr><td>Curd</td><td>60</td></tr>
+    <tr><td>Butter</td><td>120</td></tr>
+</table>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dairy Items</title>
+</head>
+<body>
+
+<h3>Method 3: Inline CSS</h3>
+
+<table style="border:3px solid black; border-collapse:collapse;">
+    <tr>
+        <th style="border:3px solid black; padding:10px;">Dairy Item</th>
+        <th style="border:3px solid black; padding:10px;">Price (₹)</th>
+    </tr>
+    <tr>
+        <td style="border:3px solid black; padding:10px;">Milk</td>
+        <td style="border:3px solid black; padding:10px;">50</td>
+    </tr>
+    <tr>
+        <td style="border:3px solid black; padding:10px;">Curd</td>
+        <td style="border:3px solid black; padding:10px;">60</td>
+    </tr>
+</table>
+
+</body>
+</html>
