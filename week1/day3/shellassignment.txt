@@ -1,0 +1,223 @@
+
+1. Write a script to open file1 and copy its contents to file2
+vi copy_file.sh
+#!/bin/bash
+cat file1 > file2
+echo "Contents of file1 copied to file2 successfully"
+sh copy_file.sh
+cat file2
+
+2. Write a script to open file1 and append its contents to file2
+vi append_file.sh
+#!/bin/bash
+cat file1 >> file2
+echo "Contents of file1 appended to file2 successfully"
+sh append_file.sh
+cat file2
+
+3. Write a script to open file1 copy contents to file2 to file1 and append content of CLA.
+vi copy_append.sh
+#!/bin/bash
+cat file1 > file2
+cat file2 > file1
+echo "$1" >> file1
+echo "Operation completed successfully"
+sh copy_append.sh "This line is from CLA"
+cat file1
+
+4. Write a script to Run p1.c and pass the o/p of p1.c as i/p to p2.c and p2.c
+vi p1.cpp
+vi p2.cpp
+vi run_cpp.sh
+#!/bin/bash
+g++ p1.cpp -o p1
+g++ p2.cpp -o p2
+./p1 | ./p2
+sh run_cpp.sh
+
+5. Find and replace all occurances of the word "auto" with "automatic" in the user given file (CLA) case in-sensitive search using a shell script and grep command.
+vi replace_auto.sh
+#!/bin/bash
+if [ -z "$1" ]; then
+    echo "Usage: sh replace_auto.sh <filename>"
+    exit 1
+fi
+if [ ! -f "$1" ]; then
+    echo "File does not exist"
+    exit 1
+fi
+echo "Occurrences before replacement:"
+grep -i "auto" "$1"
+sed -i 's/auto/automatic/Ig' "$1"
+echo "Replacement completed successfully"
+
+vi test.txt
+auto
+Auto
+AUTOMATION
+This is auto mode
+sh replace_auto.sh test.txt
+cat test.txt
+
+6. Write a Script to find Factorial of a number
+#!/bin/bash
+echo "enter a number"
+read n
+fact=1
+for i in $(seq 1 $n)
+do
+        fact=$((fact * i))
+
+done
+echo "factoria is $fact"
+
+7. Write a Script to print all the Prime numbers between $1 and $2
+#!/bin/sh
+
+from=$1
+to=$2
+
+for num in $(seq $from $to)
+do
+    if [ $num -le 1 ]; then
+        continue
+    fi
+
+    prime=1
+
+    for i in $(seq 2 $((num - 1)))
+    do
+        if [ $((num % i)) -eq 0 ]; then
+            prime=0
+            break
+        fi
+    done
+
+    if [ $prime -eq 1 ]; then
+        echo $num
+    fi
+done
+
+8. Print the Nth Prime number
+#!/bin/bash
+
+n=$1
+count=0
+
+for num in $(seq 2 1000)
+do
+    prime=1
+
+    for i in $(seq 2 $((num - 1)))
+    do
+        if [ $((num % i)) -eq 0 ]; then
+            prime=0
+            break
+        fi
+    done
+
+    if [ $prime -eq 1 ]; then
+        count=$((count + 1))
+    fi
+
+    if [ $count -eq $n ]; then
+        echo $num
+        break
+    fi
+done
+
+sh nth_prime.sh 5
+11
+
+9. Find the 2nd smallest digit of a number
+#!/bin/bash
+
+n=$1
+smallest=10
+sec_smallest=10
+
+while [ $n -gt 0 ]
+do
+    digit=$((n % 10))
+
+    if [ $digit -lt $smallest ]; then
+        sec_smallest=$smallest
+        smallest=$digit
+    elif [ $digit -ne $smallest ] && [ $digit -lt $sec_smallest ]; then
+        sec_smallest=$digit
+    fi
+
+    n=$((n / 10))
+done
+
+echo "$sec_smallest"
+sh second_smallest.sh 57321
+2
+
+10.Find lucky digit of the user where the lucky digit is found by finding sum of the digits of the user given number repeatedly until single digit number is found.
+#!/bin/sh
+
+num=$1
+
+while [ $num -ge 10 ]
+do
+    sum=0
+
+    while [ $num -gt 0 ]
+    do
+        digit=$((num % 10))
+        sum=$((sum + digit))
+        num=$((num / 10))
+    done
+
+    num=$sum
+done
+
+echo "Lucky digit is $num"
+sh lucky_digit.sh 987
+Lucky digit is 6
+
+11. Find sum of Odd placed Even digits of the given number.
+i/p = 5376524  o/p = 4
+
+#!/bin/sh
+
+num=$1
+pos=1
+sum=0
+
+while [ $num -gt 0 ]
+do
+    digit=$((num % 10))
+
+    if [ $((pos % 2)) -eq 1 ] && [ $((digit % 2)) -eq 0 ]; then
+        sum=$((sum + digit))
+    fi
+
+    pos=$((pos + 1))
+    num=$((num / 10))
+done
+
+echo "Sum is $sum"
+sh oddpos_even_sum.sh 5376524
+4
+
+12. Given a number, print the number which is the very next possible number having all the digits with same frequency as that of the i/p number.
+#!/bin/bash
+#
+read -p "Enter number: " n
+next=$((n + 1))
+
+while true
+do
+    if [ "$(echo $n | fold -w1 | sort | tr -d '\n')" = \
+         "$(echo $next | fold -w1 | sort | tr -d '\n')" ]
+    then
+        echo "Next number: $next"
+        break
+    fi
+    next=$((next + 1))
+done
+
+Enter number: 4623
+Next number: 4632
