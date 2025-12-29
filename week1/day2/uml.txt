@@ -1,0 +1,83 @@
+
+
+Unified Modeling Language (UML) Diagrams:-
+       UML is a standard visual modeling language used to represent the structure and behavior of a software system. It helps in designing, analyzing, and communicating system architecture before coding.
+
+UML diagrams are classified into behavioral and structural diagrams. Behavioral diagrams represent the dynamic behavior of the system, while structural diagrams represent the static structure of the system.
+
+There are 7 types of structural UML diagrams: Class, Object, Component, Deployment, Package, Composite Structure, and Profile diagrams.
+
+C O C D P C P
+Class
+Object
+Component
+Deployment
+Package
+Composite Structure
+Profile
+
+Class Diagram:-
+           A class diagram is the most widely used UML diagram that represents the static structure of a system by showing classes, their attributes, methods, and relationships between them.
+Object Diagram:-
+            An object diagram represents instances of classes and their relationships at a particular point in time. It can be considered a snapshot of the system during execution and is similar to a class diagram but with real object values.
+Component Diagram:-
+              A component diagram is a structural UML diagram that represents the physical components of a software system and their dependencies, helping to understand the system’s implementation and architecture.
+Component Diagram = Big software blocks + interfaces
+
+Deployment Diagram:-
+              A deployment diagram is a UML structural diagram that represents the physical architecture of a system by showing hardware nodes and the software artifacts deployed on them.
+Deployment Diagram = Software + Hardware mapping
+
+Package Diagram:-
+            A package diagram is a structural UML diagram used to represent the organization of packages and the dependencies between them, helping to group related elements and simplify system design.
+
+Composite Structure Diagram:-
+            A composite structure diagram is a UML structural diagram that represents the internal structure of a class or component using parts, ports, and connectors to show how it behaves and interacts internally.
+
+Profile Diagram:-
+            A Profile Diagram is a UML structural diagram used to extend and customize UML for specific domains by using stereotypes, tagged values, and constraints.
+
+
+Behavioral UML Diagrams:-
+            Behavioral UML diagrams represent the dynamic aspects of a system by showing how objects interact and how the system behaves over time in response to events.
+
+Behavioral UML = System behavior + interaction + flow
+
+Behavioral UML diagrams include Use Case, Activity, Sequence, State Machine, Communication, Interaction Overview, and Timing diagrams.
+
+U A S S C I T
+
+Use Case
+Activity
+Sequence
+State Machine
+Communication
+Interaction Overview
+Timing
+
+Use Case Diagrams:-
+         A Use Case Diagram represents the functional requirements of a system by showing interactions between external actors and the system. It provides a high-level view of what the system does without implementation details.
+
+Use Case Diagram = User + Actions + System
+
+Activity Diagrams:-
+         An activity diagram is a behavioral UML diagram that represents the flow of control and sequence of activities in a system, including decisions and parallel processes.
+Activity Diagram = Flowchart of system behavior
+
+Sequence Diagram:-
+        A sequence diagram is a behavioral UML diagram that represents interactions between objects in a system in the order in which they occur over time.
+Sequence Diagram = Conversation between objects (top → bottom)
+
+State Machine Diagrams:-
+        A state machine diagram is a behavioral UML diagram that represents the dynamic behavior of a system or class by showing its states and transitions in response to events and external stimuli
+  State Machine Diagram = States + Events + Transitions
+
+Communication Diagram:-
+         A communication diagram is a behavioral UML diagram that represents interactions between objects by showing sequenced messages and the relationships among objects in a free-form layout.
+Communication Diagram = Objects + Links + Numbered messages
+
+Interaction Overview Diagram:-
+          An Interaction Overview Diagram is a behavioral UML diagram that provides a high-level view of control flow between interactions, combining features of activity and interaction diagrams to model complex system behavior.
+
+Timing Diagram:-
+        A timing diagram is a behavioral UML diagram that represents the behavior of objects over a specific time period, focusing on state changes and time constraints.
