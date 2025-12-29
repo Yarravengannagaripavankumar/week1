@@ -1,1 +1,134 @@
 
+
+
+software development lifecycle- types
+sdlc is and developmet of a software application form intiation to deployment
+
+<img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/cee75e3a-5271-4eee-8b59-5e41624c469d" />
+
+types:
+1. water fall model
+2. Iterative sdlc model
+3. Agile SDLC Model
+4. V-Model
+5. RAD (Rapid Application Development)
+6. Spiral SDLC Model
+7. DevOps SDLC Model
+8. Incremental SDLC Model
+
+1.water fall model:
+             Waterfall is a linear and sequential SDLC model where each phase must be completed before moving to the next phase.
+
+ In the Waterfall model, software development is done in a sequential manner where each phase like requirements, design, development, testing, deployment, and maintenance is completed one after the other.
+
+ <img width="739" height="511" alt="image" src="https://github.com/user-attachments/assets/5b0a9cd6-3153-45d8-97e2-0ffd3e6cbbc1" />
+
+ Requirements → Design → Development → Testing → Deployment → Maintenance
+
+ 1️ Requirements Phase:- We decide WHAT to build
+ 2️ Design Phase :- We decide HOW to build the software
+ 3️ Development Phase (Coding):- Actual coding happens here
+ 4️ Testing Phase:- We check whether the software works correctly or not
+ 5️ Deployment Phase:- Software goes live
+ 6️ Maintenance Phase:- Support and updates after delivery
+
+ Advantages:
+ 1️ Simplicity:- Because it is linear and sequential, beginners can easily follow it.
+ 2️ Clear Documentation:- Documentation is done properly at every stage.
+ 3️ Stable Requirements:-Suitable for projects with fixed requirements.
+ 4️ Predictability:-Waterfall gives better predictability of timelines.
+
+  Disadvantages:
+ 1️ Rigidity (Very Important):-Once a phase is completed, changes are difficult,Not flexible
+ 2️ Late Testing:- Errors are detected late in the development cycle.
+ 3️ Limited Client Involvement:- Client is mostly involved only in requirements phase,Feedback is not taken frequently
+ 4️ No Prototyping:-No working model shown early,Users see the software only at the end
+
+ The Waterfall model is suitable for projects with well-defined and stable requirements where a structured and predictable development process is required.
+
+ 2.Iterative sdlc model:-
+                       Develop the software in small parts and continuously improve it with each iteration.
+
+   build → test → improve → repeat.
+
+   <img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/45e738b2-95a4-4d7a-8716-be96be545b07" />
+
+   1.How Iterative Model Works (Step-by-Step)
+   2.Start with basic requirements
+   3.Develop a small working version
+   4.Test it
+   5.Get feedback
+   6.Improve the software
+   7.Repeat the process until final product is ready
+
+   Benefits of Iterative SDLC Model:
+   1️ Faster Time-to-Market:  Software is released in parts,Each iteration gives a working feature
+   2 Enhanced Flexibility: Changes are easy to handle,New requirements can be added in the next iteration
+   3 Improved Quality: Testing is done in every iteration,Bugs are fixed early
+   4 Increased Stakeholder Engagement: Clients and stakeholders are involved again and again,Feedback is taken after every iteration
+   The Iterative SDLC model develops software incrementally, allowing faster delivery, flexibility to handle changes, continuous testing, and regular stakeholder feedback. This results in high-quality software that meets evolving user requirements.
+
+  3. V-models (Verification and Validation Models) in SDLC:-
+                          The V-Model is an extension of the Waterfall model where testing is performed in parallel with development, ensuring early defect detection and higher software quality.
+
+Waterfall + Testing parallel = V-Model
+
+
+LEFT SIDE → Development (Verification)               RIGHT SIDE → Testing (Validation)
+Requirement Analysis                                 Acceptance Testing
+System Design                                        System Testing
+Architecture / High-Level Design                     Integration Testing
+Module / Low-Level Design                            Unit Testing
+
+4. Spiral SDLC Models:-
+             The Spiral SDLC model combines iterative development with systematic planning and focuses heavily on risk analysis at every stage of the software life cycle.
+
+Iterative + Waterfall + Risk Analysis = Spiral Model
+
+The Spiral model is: A combination of Waterfall + Iterative models  and Build software step by step like Iterative model, but analyze risks at every step.
+
+5. Agile SDLC Models:-
+        Agile is a set of principles defined by the Agile Manifesto that focuses on iterative development, customer collaboration, continuous feedback, and adapting to change.
+
+Agile = People + Working Software + Feedback + Change
+
+6. DevOps SDLC Models:-
+           To make software development faster, smoother, and more reliable by improving collaboration between developers and operations teams.
+DevOps = Development + Operations
+Build, test, release, deploy, and monitor software continuously using automation and collaboration.
+DevOps is a cultural and technical approach that integrates development and operations teams to enable continuous integration, continuous testing, and continuous deployment, resulting in faster and more reliable software delivery.
+
+Collaboration → Dev + Ops together
+Automation → Less manual work
+CI/CD → Build, test, deploy continuously
+IaC → Infrastructure managed using code
+
+DevOps is based on principles such as collaboration between development and operations teams, automation of repetitive tasks, continuous integration and delivery, and infrastructure as code. These principles help achieve faster, reliable, and high-quality software delivery.
+
+7. Rapid Application Development (RAD) SDLC Models:-
+              Develop quick prototypes, show them to users, take feedback, and improve rapidly.
+RAD divides the project into multiple modules.
+Each module is developed independently and quickly.
+
+Iterative → Build in small cycles
+User involvement → Frequent feedback
+Prototyping → Working models early
+Adaptability → Easy changes
+
+RAD is based on iterative development, rapid prototyping, continuous user involvement, and high adaptability to changes, enabling fast delivery of software that closely matches user requirements.
+
+8. Incremental SDLC Models:-
+              Develop and deliver the software in small functional parts, adding more features in each increment.
+
+How Incremental Model Works (Step-by-Step)
+
+1️ Decide overall requirements
+2️ Divide the system into small increments
+3️ Develop the first increment (basic features)
+4️ Test and deliver it
+5️ Develop the next increment (new + improved features)
+6️ Repeat until the full system is complete
+
+The Incremental SDLC model develops software in small, manageable increments, where each increment delivers new features and improvements until the complete system is built.
+
+Incremental = Build → Deliver → Add More → Repeat
