@@ -1,0 +1,325 @@
+
+Unix Commands
+
+ls Command
+ls stands for list.
+It is used to display files and directories in the current directory.
+
+Options Available with ls
+1️. ls -l
+Shows detailed information
+2️. ls -t (Time based sorting)
+Lists files sorted by modification time
+3️. ls -r (Reverse order)
+Reverses the order of listing.
+4️. ls -l -t
+Long listing format
+Sorted by modification time
+5️. ls -ltr
+Displays oldest files first with detailed information.
+6️. ls -lr
+Long listing
+Reverse order
+
+mkdir – Create a Directory
+mkdir is used to create a new directory (folder).
+mkdir directory_name
+mkdir projects
+
+cd – Change Directory
+cd is used to move from one directory to another.
+cd directory_name
+
+Types of Paths in cd
+1️. Absolute Path
+Full path starting from the root /
+Starts with /
+cd /home/neekshith/projects
+
+2️. Relative Path
+Path relative to the current directory
+Does not start with /
+cd projects
+
+Root Directory in Unix
+The root (parent-most) directory in Unix is /
+All directories start from /
+
+pwd – Present Working Directory
+pwd displays the current directory path.
+pwd
+Example Output
+/home/neekshith/projects
+
+man Command – Manual Pages
+shows the manual/help page for a command.
+man command_name
+man ls
+
+rm – Remove Files or Directories
+rm is used to delete files or directories.
+rm -r
+rm -r directory_name
+-r → recursive
+Deletes a directory along with all its contents
+
+rm -R
+Same as -r (uppercase also works)
+rm -R directory_name
+
+cat > file2 – Create a File Using STDIN
+cat > file2
+This command:
+Creates a new file named file2
+Takes input from STDIN (keyboard)
+Stores the entered content into the file
+
+Command	Description
+ls	            List files and directories
+rm	            Remove files
+mkdir	          Create directory
+rmdir	          Remove empty directory
+head	          Display first lines of a file
+tail	          Display last lines of a file
+cat	            View or create file content
+man	            Command manual
+who	            Show logged-in users
+grep	          Search text in files
+awk	            Text processing tool
+cp	            Copy files
+mv	            Move or rename files
+
+class B
+class D
+Valid Assignment
+B ref = new D();
+
+Invalid Assignment
+D ref = new B();   // Error
+
+Agile & Scrum
+Agile
+Agile is a software development methodology
+Focuses on:
+Iterative development
+Customer collaboration
+Flexibility to change
+
+Scrum
+Scrum is a framework under Agile
+Work is divided into:
+Sprints (usually 2–4 weeks)
+Roles:
+     Product Owner
+     Scrum Master
+     Development Team
+
+Unix Commands
+Used to interact with the Unix/Linux operating system
+Examples: ls, cd, mkdir, rm, cat, pwd, etc.
+Help in:
+File management
+Process handling
+System navigation
+
+Shell Scripting
+Shell scripting is programming using shell
+Used for:
+Automation
+Problem solving
+Task scheduling
+Involves:
+Variables
+Conditions (if, else)
+Loops
+Input & output
+
+Git
+Git Commands
+Used for version control
+Tracks changes in code
+
+Rebasing
+Used to move or combine commits
+Helps maintain a clean commit history
+
+Branching
+Allows working on multiple features simultaneously
+Each branch is independent
+
+Conflict Management
+Occurs when multiple changes affect the same lines
+Must be resolved manually before merging
+
+🔹 Networking
+Types of Networks
+LAN (Local Area Network)
+MAN (Metropolitan Area Network)
+WAN (Wide Area Network)
+
+Network Topologies
+Star
+Bus
+Ring
+Mesh
+
+Network Protocols
+Define rules for communication
+Examples:
+HTTP
+HTTPS
+FTP
+TCP/IP
+
+Shell Scripting
+1. Script to Print “Hello Programming”
+Filename: p1.sh
+#!/bin/bash
+echo "hello programming"
+Run the script
+sh p1.sh
+
+2. Script to Print Current User, Date & Logged-In Users
+#!/bin/bash
+echo "Username is $USER"
+echo "Today date is:"
+date
+echo "Number of users logged in:"
+who | wc -l
+echo "Calendar:"
+cal
+
+3. Program to Check if User-Given Number is Even
+#!/bin/bash
+echo "Enter a number to check if it is Even:"
+read inputNumber
+result=$(expr $inputNumber % 2)
+
+if [ $result -eq 0 ]
+then
+    echo "$inputNumber is Even"
+else
+    echo "$inputNumber is Odd"
+fi
+
+4. Alternate Even/Odd Program Using test
+#!/bin/bash
+echo "Enter a number:"
+read num
+result=$(expr $num % 2)
+if test $result -eq 0
+then
+    echo "Number is Even"
+else
+    echo "Number is Odd"
+fi
+
+5. Leap Year Program (Using read & Logical Operators
+#!/bin/bash
+#
+echo "Enter the year to check if it is Leap year:"
+read inputYear
+
+if [ $((inputYear % 4)) -eq 0 ] && [ $((inputYear % 100)) -ne 0 ] || [ $((inputYear % 400)) -eq 0 ]
+then
+    echo "$inputYear is a Leap Year"
+else
+    echo "$inputYear is not a Leap Year"
+fi
+
+6. Leap Year Program Using Command-Line Argument ($1)
+#!/bin/bash
+
+year=$1
+
+if [ -z "$year" ]; then
+    echo "Usage: $0 <year>"
+    exit 1
+fi
+
+if (( (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0) )); then
+    echo "$year is a leap year"
+else
+    echo "$year is not a leap year"
+fi
+How to Run
+sh leap.sh 2024
+
+Command-Line Arguments (C, Java & Shell Comparison)
+C Language
+main(int argc, char** args) {
+    // args[0] is the program name
+    int num1 = atoi(args[1]);
+    int num2 = atoi(args[2]);
+}
+
+argc → argument count
+args[0] → program name
+args[1], args[2] → user inputs
+atoi() → converts string to integer
+
+Java
+public static void main(String[] args) {
+    int num1 = Integer.parseInt(args[0]);
+    int num2 = Integer.parseInt(args[1]);
+}
+Explanation
+args[0], args[1] → command-line inputs
+Integer.parseInt() → converts string to integer
+
+Shell Scripting
+$1  → first argument
+$2  → second argument
+$0  → script name
+
+7.Factorial Program Using while Loop
+Script: factorial.sh
+#!/bin/bash
+
+inputNumber=$1
+factorialNumber=1
+tempNumber=$inputNumber
+
+while [ $tempNumber -ge 1 ]
+do
+    factorialNumber=$((factorialNumber * tempNumber))
+    tempNumber=$((tempNumber - 1))
+done
+
+echo "Factorial of $inputNumber is $factorialNumber"
+exit 0
+How to Run
+sh factorial.sh 5
+
+8. Prime Numbers Between Two Numbers
+Script: prime.sh
+#!/bin/bash
+
+fromNumber=$1
+toNumber=$2
+tempNumber=$fromNumber
+
+while [ $tempNumber -le $toNumber ]
+do
+    prime=1
+    i=2
+
+    while [ $i -lt $tempNumber ]
+    do
+        if [ $((tempNumber % i)) -eq 0 ]
+        then
+            prime=0
+            break
+        fi
+        i=$((i + 1))
+    done
+
+    if [ $prime -eq 1 ] && [ $tempNumber -gt 1 ]
+    then
+        echo $tempNumber
+    fi
+
+    tempNumber=$((tempNumber + 1))
+done
+
+exit 0
