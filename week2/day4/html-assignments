@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            color: blue;
+            text-decoration: underline;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>heading</h1>
+    <p>this is my first html program our trainer said us to put the description so u know that this is a description</p>
+    
+</body>
+</html>
