@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+
+    <style>
+        form {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            border: 1px solid black;
+        }
+
+        div {
+            margin-bottom: 15px;
+        }
+
+        button {
+            width: 100px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<center>
+    <form id="loginForm">
+        <div>
+            <label>Username:</label><br>
+            <input type="text" id="username"><br><br>
+
+            <label>Password:</label><br>
+            <input type="password" id="password"><br><br>
+        </div>
+
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</center>
+
+<script>
+    const form = document.getElementById("loginForm");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        const usernamePattern = /^[A-Za-z]{5,}$/;
+        const passwordPattern = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,}$/;
+
+        if (username === "" && password === "") {
+            alert("Username and Password cannot be empty");
+        } 
+        else if (!usernamePattern.test(username)) {
+            alert("Username must be at least 5 letters and contain only alphabets");
+        } 
+        else if (!passwordPattern.test(password)) {
+            alert("Password must be at least 8 characters and include 1 capital letter, 1 number, and 1 special character");
+        } 
+        else {
+            alert("Login successful");
+        }
+    });
+</script>
+
+</body>
+</html>
