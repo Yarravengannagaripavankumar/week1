@@ -1,0 +1,37 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Personal Diary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>My Personal Diary</h2>
+
+<!-- LOGIN SECTION -->
+<div id="loginDiv">
+    <h3>Login</h3>
+    Username:
+    <input type="text" id="username"><br><br>
+
+    Password:
+    <input type="password" id="password"><br><br>
+
+    <button onclick="login()">Login</button>
+</div>
+
+<!-- MENU SECTION -->
+<div id="menuDiv" style="display:none;">
+    <h3>Menu</h3>
+    <button onclick="addNote()">1. Enter New Diary Note</button><br><br>
+    <button onclick="updateNote()">2. Update Diary Note</button><br><br>
+    <button onclick="searchNote()">3. Search Diary Note</button><br><br>
+    <button onclick="rangeNotes()">4. Display Notes (Date Range)</button><br><br>
+    <button onclick="logout()">Logout</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
